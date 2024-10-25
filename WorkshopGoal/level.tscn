@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7ay3spncdlky"]
+
+[ext_resource type="Texture2D" uid="uid://iedwrbdrmc0h" path="res://icon.svg" id="1_3poip"]
+[ext_resource type="PackedScene" uid="uid://dq5u2wnhdiidr" path="res://player.tscn" id="1_5ft2h"]
+[ext_resource type="PackedScene" uid="uid://bcqxqb3yqpdiy" path="res://platform.tscn" id="2_2ju16"]
+[ext_resource type="PackedScene" uid="uid://bkj14qei4q74o" path="res://box.tscn" id="3_f715p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_joal1"]
+size = Vector2(231, 149)
+
+[node name="Level" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_5ft2h")]
+position = Vector2(566, 269)
+
+[node name="Platform" parent="." instance=ExtResource("2_2ju16")]
+position = Vector2(434, 577)
+
+[node name="Box" parent="." instance=ExtResource("3_f715p")]
+position = Vector2(1050, 515)
+
+[node name="Box2" parent="." instance=ExtResource("3_f715p")]
+position = Vector2(1047, 355)
+
+[node name="Box3" parent="." instance=ExtResource("3_f715p")]
+position = Vector2(1049, 219)
+
+[node name="Platform2" parent="." instance=ExtResource("2_2ju16")]
+position = Vector2(1550, 569)
+
+[node name="Platform3" parent="." instance=ExtResource("2_2ju16")]
+position = Vector2(1696, 287)
+
+[node name="Box4" parent="." instance=ExtResource("3_f715p")]
+position = Vector2(1357, 204)
+
+[node name="Box5" parent="." instance=ExtResource("3_f715p")]
+position = Vector2(1494, 212)
+
+[node name="Box6" parent="." instance=ExtResource("3_f715p")]
+position = Vector2(1423, 69)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1717, 164)
+shape = SubResource("RectangleShape2D_joal1")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(1716, 210)
+emitting = false
+amount = 200
+one_shot = true
+texture = ExtResource("1_3poip")
+direction = Vector2(0, -1)
+initial_velocity_min = 701.2
+initial_velocity_max = 701.2
+scale_amount_min = 0.1
+scale_amount_max = 0.2
+
+[connection signal="body_entered" from="Area2D" to="CPUParticles2D" method="restart" unbinds=1]
