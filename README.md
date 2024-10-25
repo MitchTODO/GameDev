@@ -64,7 +64,7 @@
 
 # Demos
 
-[LINK TO DEMOS](file:////nebula/cloud$/storage/Presentations/CSCLUB)
+[LINK TO DEMOS](file://nebula/cloud$/storage/Presentations/CSCLUB)
 
 # Quick Start 🚀
 
