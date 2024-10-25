@@ -191,11 +191,14 @@ Quick start to create a new Godot project.
 
    <img src="./ReadMeAssets/platform3.png" alt="isolated" width="300"/>
    </div>
-   3. Once again we have the same error needing a shape, so let’s add a **CollisionShape2D** and give it a rectangle shape in the inspector.
+   
+   <b>3.</b> Once again we have the same error needing a shape, so let’s add a **CollisionShape2D** and give it a rectangle shape in the inspector.
 
-   4. Run the scene again!
+   <b>4.</b> Run the scene again!
 
-   5. Now that you aren’t falling to you doom, the default controls are: walk around with arrow keys and jump with space.
+   <b>5.</b> Now that you aren’t falling to you doom, the default controls are: walk around with arrow keys and jump with space.
+
+  ---
 
    #### Plateform Overview
 
