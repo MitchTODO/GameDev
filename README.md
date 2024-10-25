@@ -67,7 +67,7 @@ Quick start to create a new Godot project.
 
 ## Project Setup
 
-   1. Lunch Godot
+   1. Launch Godot
 
    2. Press create
 
@@ -106,7 +106,11 @@ Quick start to create a new Godot project.
 
    <img src="./ReadMeAssets/player2.png" alt="isolated" width="300"/>
 
-   3. Next ***drag*** the **“icon.svg”** onto the scene view in the center. Then in the scene hierarchy on the left, drag the new Icon we just created onto the Player node to make it a child of the Player. 
+   3. Next ***drag*** the **“icon.svg”** onto the scene view in the center. Then in the scene hierarchy on the left, drag the new Icon we just created onto the Player node to make it a child of the Player.
+
+ <img src="./ReadMeAssets/player3_1.png" alt="isolated" width="300"/>
+
+ <img src="./ReadMeAssets/player3_2.png" alt="isolated" width="300"/>
    
    ***Note: We’ll use this as the visuals for our player.*** 
 
@@ -116,7 +120,7 @@ Quick start to create a new Godot project.
 
    <img src="./ReadMeAssets/player3.png" alt="isolated" width="300"/>
 
-   6. Once again, we have another warning. Now make sure the **CollisionShape2D** node is selected in the scene hierarchy, and then look over at the Inspector on the right. At the very top we need to specify a shape. For now select a rectangle. 
+   5. Once again, we have another warning. Now make sure the **CollisionShape2D** node is selected in the scene hierarchy, and then look over at the Inspector on the right. At the very top we need to specify a shape. For now select a rectangle. 
 
 
    <img src="./ReadMeAssets/player4.png" alt="isolated" width="300"/>
