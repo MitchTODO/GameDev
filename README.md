@@ -24,6 +24,7 @@
 
 - [GameDev](#gamedev)
 - [Overview](#overview)
+- [Demos](#Demos)
 - [Workshop Objectives 🏗️](#workshop-objectives-️)
 - [Quick Start 🚀](#quick-start-)
   - [Project Setup](#project-setup)
@@ -60,6 +61,10 @@
    - Basic understanding of signals 
 
 3. **Feel confident** in your ability to explore and keep building.
+
+# Demos
+
+[LINK TO DEMOS](//nebula/cloud$/storage/Presentations/CSCLUB)
 
 # Quick Start 🚀
 
@@ -109,8 +114,6 @@ Quick start to create a new Godot project.
    3. Next ***drag*** the **“icon.svg”** onto the scene view in the center. Then in the scene hierarchy on the left, drag the new Icon we just created onto the Player node to make it a child of the Player.
 
  <img src="./ReadMeAssets/player3_1.png" alt="isolated" width="300"/>
-
- <img src="./ReadMeAssets/player3_2.png" alt="isolated" width="300"/>
    
    ***Note: We’ll use this as the visuals for our player.*** 
 
@@ -144,11 +147,11 @@ Quick start to create a new Godot project.
    
    Now as fun as it is to stare at the Godoplayer icon, most players are more interesting than a static image. Next we’ll set up our player with some movement.
 
-   9. Right click the Player node and select “Attach Script”
+   1. Right click the Player node and select “Attach Script”
 
    <img src="./ReadMeAssets/player8.png" alt="isolated" width="300"/>
 
-   10. We don’t need to change anything in this menu. The important part is that we are using Template: **CharacterBody2D: Basic Movement**. This will give us some basic player behavior out of the box. Go ahead and click **Create**.
+   2. We don’t need to change anything in this menu. The important part is that we are using Template: **CharacterBody2D: Basic Movement**. This will give us some basic player behavior out of the box. Go ahead and click **Create**.
 
 
    <img src="./ReadMeAssets/player9.png" alt="isolated" width="300"/>
