@@ -64,10 +64,9 @@
 
 # Demos
 
-[LINK TO DEMOS](file://nebula/cloud$/storage/Presentations/CSCLUB)
-file:////nebula/cloud$/storage/Presentations/CSCLUB
-
-file://nebula/cloud$/storage/Presentations/CSCLUB
+[LINK TO DEMOS]
+copy this into your browser: file://///nebula/cloud$/storage/Presentations/CSCLUB
+or copy this into your file explorer: \\nebula\cloud$\storage\Presentations\CSCLUB
 
 # Quick Start 🚀
 
