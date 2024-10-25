@@ -64,7 +64,7 @@
 
 # Demos
 
-[LINK TO DEMOS](file:////nebula/cloud$/storage/Presentations/CSCLUB)
+[LINK TO DEMOS](file://nebula/cloud$/storage/Presentations/CSCLUB)
 file:////nebula/cloud$/storage/Presentations/CSCLUB
 
 file://nebula/cloud$/storage/Presentations/CSCLUB
@@ -194,8 +194,6 @@ Quick start to create a new Godot project.
 
    2. Again we’ll want to see our platform so drag out the **icon.svg** and stretch it into a platform. Make sure it is a child of the **StaticBody2D**
 
-   ***Note: be sure not to copy paste any previous collision shapes or you may get strange behavior***
-
    <div>
    <img src="./ReadMeAssets/platform2.png" alt="isolated" width="800"/>
 
@@ -203,6 +201,7 @@ Quick start to create a new Godot project.
    </div>
    
    <b>3.</b> Once again we have the same error needing a shape, so let’s add a **CollisionShape2D** and give it a rectangle shape in the inspector.
+  ***Note: be sure not to copy paste any previous collision shapes or you may get strange behavior***
 
    <b>4.</b> Run the scene again!
 
@@ -247,7 +246,7 @@ Click on the player.tscn in the FileSystem to view the scene.
 
  <img src="./ReadMeAssets/playerCam5.png" alt="isolated" width="300"/>
 
-1. Here it might be more obvious why the camera is offset, it’s because the character collision and Icon aren’t lined up with the origin.
+5. Here it might be more obvious why the camera is offset, it’s because the character collision and Icon aren’t lined up with the origin.
    
 Select both the **Icon** and **CollisionShape2D** nodes, then open the Transform drop down in the inspector. And then click the arrow next to position to reset the position back to 0, 0.
 
@@ -259,7 +258,7 @@ Select both the **Icon** and **CollisionShape2D** nodes, then open the Transform
 
 6. While we’re here we might as well add some camera smoothing. Select the camera in the scene hierarchy, go to the inspector, and search ***“position smoothing”*** and enable it.
    
-If your player looks blurry while moving around you can disable smoothing, it’s up to you
+If you don't like how this effect looks on your player while it's moving, you can disable smoothing.
 
 <img src="./ReadMeAssets/playerCam9.png" alt="isolated" width="300"/>
 
@@ -288,11 +287,11 @@ Now that we have a level, it’s time to populate it with some objects we can ha
    
 These are useful for an object with collision that we want to be able to push around.
 
-1. Add the **icon** and the **CollisionShape2D** like in the previous steps.
+2. Add the **icon** and the **CollisionShape2D** like in the previous steps.
 
 <img src="./ReadMeAssets/physicBox1.png" alt="isolated" width="300"/>
 
-3. Next we’ll build a quick tower of boxes, but it’s kind of difficult to drag the boxes around.
+3. Next we’re going build a quick tower, but it’s kind of difficult to drag the boxes around. So first we'll need to take a step back.
    
 We’ll want to turn this into a scene we can make instances of. Right click the Crate in the scene hierarchy and click ***“Save Branch as Scene”***, then save.
 
@@ -313,9 +312,9 @@ We’ll want to turn this into a scene we can make instances of. Right click the
 
 <img src="./ReadMeAssets/physicBox6.png" alt="isolated" width="300"/>
 
-1. Save with ***Ctrl + S*** and then back in the level the crate will need to be adjusted back into position.
+6. Save with ***Ctrl + S*** and then back in the level the crate will need to be adjusted back into position.
    
-2. Now make a little tower of crates. Select the **Crate** and you can use ***Ctrl + D*** to duplicate it
+7. Now make a little tower of crates. Select the **Crate** and you can use ***Ctrl + D*** to duplicate it
 
 <img src="./ReadMeAssets/physicBox7.png" alt="isolated" width="300"/>
 
@@ -331,9 +330,8 @@ Go back into the ***crate scene*** and select the **Crate node**. Search collisi
 
 <img src="./ReadMeAssets/physicBox10.png" alt="isolated" width="300"/>
 
-10. The mask value selected here is what the Crate can be hit by, and the layer value is what can hit it if it masks that value. 
-
-Our player’s collisions by default look the same, with 1 for both. To prevent the boxes from being blocked by the crates, change the layer off of 1 and select 2. Make sure 1 is dark
+10. The mask value selected here is what the crate can be hit by, and the layer value is what the crate can block.
+Our player’s collisions by default look the same, with 1 for both. To prevent the boxes from being blocked by the crates, change the layer off of 1 and select 2. Make sure 1 is dark.
 
 <img src="./ReadMeAssets/physicBox11.png" alt="isolated" width="300"/>
 
@@ -367,6 +365,7 @@ Before we move on, we have a lot of the same **Icon** on our screen, and it’s 
 
 ---
 
+  ### Crate Overview
 
    <img src="./ReadMeAssets/bob.png" alt="isolated" width="300"/>
 
@@ -397,7 +396,7 @@ Not that a great platformer game can’t take place on a floating island (like C
   
   <img src="./ReadMeAssets/level3.png" alt="isolated" width="300"/>
 
-3. You can optionally recolor these platforms too, just be sure to recolor them in the platform scene if you want it to apply to all of them. As modulate changes on platform instances will only apply to that instance.
+3. You can optionally recolor these platforms too, just be sure to recolor them in the platform scene if you want it to apply to all of them. If you change the modulate color on the platforms in the level, it will only apply to that instance.
 
  <img src="./ReadMeAssets/level4.png" alt="isolated" width="300"/>
 
@@ -409,20 +408,7 @@ In the script tab you can adjust your player’s jump height by changing the **J
 
 ***Make sure to keep it negative, since negative Y is the up direction in Godot***
 
-7. ADVANCED Adding a goal field
-notes for presenters:
-1 create **Area2D** and add collision shape to it
-
-2 create CPU particle
-3 Increase particle initial velocity
-4 set particle direction to x = 0 y = -1
-
-5 Area2D → Inspector (Node) → Signals > Area2D > body_entered → connect
-6 Select CPU particle
-7 Click pick → uncheck both sliders → set_emitting
-
-will work but causes error. dw about it for this demo. would be better with code
-
+  ---
 
 # Tools & Resources
 
