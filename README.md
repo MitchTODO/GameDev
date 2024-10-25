@@ -66,6 +66,8 @@
 
 [LINK TO DEMOS](file://nebula/cloud$/storage/Presentations/CSCLUB)
 
+file://nebula/cloud$/storage/Presentations/CSCLUB
+
 # Quick Start 🚀
 
 Quick start to create a new Godot project.
