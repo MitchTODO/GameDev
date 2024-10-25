@@ -64,10 +64,11 @@
 
 # Demos
 
-[LINK TO DEMOS]
 copy this into your browser: file://///nebula/cloud$/storage/Presentations/CSCLUB
 
 or copy this into your file explorer: \\nebula\cloud$\storage\Presentations\CSCLUB
+
+this will only work on the CS Lab computers
 
 # Quick Start 🚀
 
