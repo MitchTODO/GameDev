@@ -64,7 +64,8 @@
 
 # Demos
 
-[LINK TO DEMOS](file://nebula/cloud$/storage/Presentations/CSCLUB)
+[LINK TO DEMOS](file:////nebula/cloud$/storage/Presentations/CSCLUB)
+file:////nebula/cloud$/storage/Presentations/CSCLUB
 
 file://nebula/cloud$/storage/Presentations/CSCLUB
 
