@@ -67,11 +67,17 @@
 Here are the demo games!!
 
 ## ChemBubble 
+
+Author: TheCodeFather
+
 ![Code]("")
 ![Exe]("")
 
 ## DontBugMe
-![Code]("https://github.com/Baboobraz/DontBugMe")
+
+Author: 
+
+![Github]("https://github.com/Baboobraz/DontBugMe")
 ![Exe]("")
 
 ## FirstGame
