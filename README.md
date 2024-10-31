@@ -64,11 +64,23 @@
 
 # Demos
 
-copy this into your browser: file://///nebula/cloud$/storage/Presentations/CSCLUB
+Here are the demo games!!
 
-or copy this into your file explorer: \\nebula\cloud$\storage\Presentations\CSCLUB
+## ChemBubble 
+![Code]("")
+![Exe]("")
 
-this will only work on the CS Lab computers
+## DontBugMe
+![Code]("https://github.com/Baboobraz/DontBugMe")
+![Exe]("")
+
+## FirstGame
+![Exe]("")
+
+## DinoJumo
+![Code]("")
+![Exe]("")
+
 
 # Quick Start 🚀
 
