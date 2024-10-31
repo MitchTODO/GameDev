@@ -70,22 +70,24 @@ Here are the demo games!!
 
 Author: TheCodeFather
 
-![Code]("")
-![Exe]("")
+[Code]("")
+[Exe]("https://drive.google.com/file/d/1uVef6LuqPgqh73HoGk1SSUL3VIjjd_Rm/view?usp=sharing")
+
 
 ## DontBugMe
 
-Author: 
+Author: Baboobraz
 
-![Github]("https://github.com/Baboobraz/DontBugMe")
-![Exe]("")
+[Github]("https://github.com/Baboobraz/DontBugMe")
+[Exe]("")
 
 ## FirstGame
-![Exe]("")
+
+[Exe]("https://drive.google.com/file/d/1ec_eW4sCvOppcwFXed6Wyg4GxALTbRAb/view?usp=sharing")
 
 ## DinoJumo
-![Code]("")
-![Exe]("")
+[Code]("")
+[Exe]("")
 
 
 # Quick Start 🚀
