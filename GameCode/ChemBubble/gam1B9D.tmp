@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvye3yfn326qx"]
+
+[ext_resource type="PackedScene" uid="uid://be56ljip25n78" path="res://player.tscn" id="1_yqnhl"]
+
+[sub_resource type="GDScript" id="GDScript_klma4"]
+script/source = "extends Node
+
+var level = preload(\"res://level_1.tscn\").instantiate()
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+func start(new_level):
+	if level:
+		level.queue_free()
+		add_child(new_level)
+	player.position = level.$start.position
+"
+
+[node name="game" type="Node"]
+script = SubResource("GDScript_klma4")
+
+[node name="player" parent="." instance=ExtResource("1_yqnhl")]

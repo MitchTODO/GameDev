@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://byuf314sbyt8q"]
+
+[ext_resource type="Texture2D" uid="uid://3h8uc4toedxn" path="res://bad_bubble.webp" id="1_6wlnb"]
+
+[sub_resource type="GDScript" id="GDScript_j4dpb"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 300.0
+
+var destination = Vector2(0,0)
+
+func _physics_process(delta):
+	move_and_slide()
+
+func pickNewDestination():
+	var player = get_tree().current_scene.get_node(\"player\")
+	match randi_range(0, 1):
+		0:
+			velocity = Vector2(randf_range(-SPEED * 2, SPEED * 2), randf_range(-SPEED * 2, SPEED * 2))
+		1:
+			var direction = (player.position - position).normalized()
+			var speed = randf_range(200, 1000)
+			if scale.x <= player.scale.x:
+				direction *= -1
+			velocity = direction * speed
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ig36i"]
+radius = 319.0
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
+script = SubResource("GDScript_j4dpb")
+
+[node name="image" type="Sprite2D" parent="."]
+texture = ExtResource("1_6wlnb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ig36i")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="pickNewDestination"]

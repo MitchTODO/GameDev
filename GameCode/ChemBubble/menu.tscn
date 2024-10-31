@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://6f0hijn0jdnt"]
+
+[sub_resource type="GDScript" id="GDScript_5yagt"]
+script/source = "extends Control
+
+const PORT = 4242
+@onready var peer = ENetMultiplayerPeer.new()
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+func spawnPlayer(id):
+	print(\"connected to \" , id)
+	
+func on_disconnect(id):
+	print(\"disconnected \", id)
+
+func _on_host_pressed():
+	peer.create_server(PORT)
+	multiplayer.multiplayer_peer = peer
+	multiplayer.peer_connected.connect(spawnPlayer)
+	multiplayer.peer_disconnected.connect(on_disconnect)
+	var id = multiplayer.get_unique_id()
+	print(\"id \", id)
+	var player = spawnPlayer(id)
+	var game = preload(\"res://game.tscn\").instantiate()
+
+func _on_join_pressed():
+	peer.create_client($HBoxContainer/IP.text, PORT)
+	multiplayer.multiplayer_peer = peer
+	multiplayer.connected_to_server.connect(spawnPlayer)
+	multiplayer.peer_disconnected.connect(on_disconnect)
+	var id = multiplayer.get_unique_id()
+	print(\"id \", id)
+	var player = spawnPlayer(id)
+	var game = preload(\"res://game.tscn\").instantiate()
+
+"
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_5yagt")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 8.0
+grow_horizontal = 2
+
+[node name="Host" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Host"
+
+[node name="Join" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Join"
+
+[node name="IP" type="TextEdit" parent="HBoxContainer"]
+custom_minimum_size = Vector2(129.455, 35.095)
+layout_mode = 2
+text = "10.2.27.65"
+placeholder_text = "IP Address"
+
+[connection signal="pressed" from="HBoxContainer/Host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="HBoxContainer/Join" to="." method="_on_join_pressed"]

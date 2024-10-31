@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvye3yfn326qx"]
+
+[ext_resource type="PackedScene" uid="uid://be56ljip25n78" path="res://player.tscn" id="1_yqnhl"]
+
+[sub_resource type="GDScript" id="GDScript_klma4"]
+script/source = "extends Node
+
+var level
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	start(preload(\"res://level_1.tscn\").instantiate())
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	var zoom = (Vector2(2,2) - $player.scale) * .25
+	if zoom.x < .2:
+		zoom = Vector2(.2,.2)
+	$player/Camera2D.zoom = zoom
+
+func _input(event):
+	if event.is_action_pressed(\"ui_cancel\"):
+		get_tree().quit()
+	if event.is_action_pressed(\"reset\"):
+		get_tree().reload_current_scene()
+
+func start(level):
+	if self.level:
+		self.level.queue_free()
+	self.add_child(level)
+	$player.position = level.get_node(\"start\").position
+
+func checkSize():
+	var enemies = get_tree().get_nodes_in_group(\"enemy\")
+	var maxSize = 0
+	var minSize = 9999999
+	for enemy in enemies:
+		if enemy.scale.x > maxSize:
+			maxSize = enemy.scale.x
+		elif enemy.scale.x < minSize:
+			minSize = enemy.scale.x
+	if $player.scale.x > maxSize:
+		print(\"you won\")
+		$canvas.visible = true
+	elif $player.scale.x < minSize:
+		print(\"you lost\")
+		$canvas/text.text = \"you're so small\"
+		$canvas.visible = true
+"
+
+[sub_resource type="LabelSettings" id="LabelSettings_kd610"]
+font_size = 60
+
+[node name="game" type="Node"]
+script = SubResource("GDScript_klma4")
+
+[node name="player" parent="." instance=ExtResource("1_yqnhl")]
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_horizontal_offset = -1.0
+drag_vertical_offset = -1.0
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="canvas" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Panel" type="Panel" parent="canvas"]
+offset_left = 262.0
+offset_top = 300.0
+offset_right = 1031.0
+offset_bottom = 791.0
+
+[node name="text" type="Label" parent="canvas"]
+offset_right = 1278.0
+offset_bottom = 1084.0
+text = "you're so big"
+label_settings = SubResource("LabelSettings_kd610")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[connection signal="timeout" from="Timer" to="." method="checkSize"]
