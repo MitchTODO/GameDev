@@ -73,17 +73,15 @@ Author: TheCodeFather
 [Code]("")
 [Exe]("https://drive.google.com/file/d/1uVef6LuqPgqh73HoGk1SSUL3VIjjd_Rm/view?usp=sharing")
 
-
 ## DontBugMe
 
 Author: Baboobraz
 
 [Github]("https://github.com/Baboobraz/DontBugMe")
-[Exe]("")
+[Exe]("https://drive.google.com/file/d/1_Ls1UUDTz8DgpIl1NVfObWEIsYdGSBh4/view?usp=sharing")
 
 ## FirstGame
-
-[Exe]("https://drive.google.com/file/d/1ec_eW4sCvOppcwFXed6Wyg4GxALTbRAb/view?usp=sharing")
+[Exe]("")
 
 ## DinoJumo
 [Code]("")
