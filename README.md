@@ -81,11 +81,16 @@ Author: Baboobraz
 [Exe]("https://drive.google.com/file/d/1_Ls1UUDTz8DgpIl1NVfObWEIsYdGSBh4/view?usp=sharing")
 
 ## FirstGame
-[Exe]("")
+
+Author: 
+
+[Exe]("https://drive.google.com/file/d/1ec_eW4sCvOppcwFXed6Wyg4GxALTbRAb/view?usp=sharing")
 
 ## DinoJumo
-[Code]("")
-[Exe]("")
+
+Author: MitchTODO
+
+[Exe]("https://drive.google.com/file/d/1asPFjWNaq5eDIEP24f1FSVx2YFIwH9F5/view?usp=sharing")
 
 
 # Quick Start 🚀
