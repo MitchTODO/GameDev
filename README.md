@@ -31,7 +31,6 @@
   - [1. Godot Environment](#1-godot-environment)
   - [2. Creating a player 🕹️](#2-creating-a-player-️)
     - [2-b Player Movement](#2-b-player-movement)
-    - [Player Overview](#player-overview)
   - [3. Creating a platform](#3-creating-a-platform)
       - [Plateform Overview](#plateform-overview)
   - [4. Adding a player camera](#4-adding-a-player-camera)
@@ -66,33 +65,21 @@
 
 [Here are the demo games!!](https://drive.google.com/drive/folders/1WKXKTnzCS7f8c9bM2a4sFdPPLI82Ko5-?usp=sharing)
 
-## ChemBubble 
+<b> ![ChemBubble]("https://drive.google.com/file/d/1uVef6LuqPgqh73HoGk1SSUL3VIjjd_Rm/view?usp=sharing") </b>
 
-Author: TheCodeFather
+Author: <i>TheCodeFather</i>
 
-[Code]("")
 
-[Exe]("https://drive.google.com/file/d/1uVef6LuqPgqh73HoGk1SSUL3VIjjd_Rm/view?usp=sharing")
+<b> ![DontBugMe]("https://github.com/Baboobraz/DontBugMe") </b>
 
-## DontBugMe
+Author: <i>Baboobraz</i>
 
-Author: Baboobraz
 
-[Github]("https://github.com/Baboobraz/DontBugMe")
+<b> ![DinoJump]("https://drive.google.com/file/d/1asPFjWNaq5eDIEP24f1FSVx2YFIwH9F5/view?usp=sharing") </b>
 
-[Exe]("https://drive.google.com/file/d/1_Ls1UUDTz8DgpIl1NVfObWEIsYdGSBh4/view?usp=sharing")
+Author: <i>MitchTODO</i>
 
-## FirstGame
 
-Author: 
-
-[Exe]("https://drive.google.com/file/d/1ec_eW4sCvOppcwFXed6Wyg4GxALTbRAb/view?usp=sharing")
-
-## DinoJumo
-
-Author: MitchTODO
-
-[Exe]("https://drive.google.com/file/d/1asPFjWNaq5eDIEP24f1FSVx2YFIwH9F5/view?usp=sharing")
 
 
 # Quick Start 🚀
@@ -197,8 +184,10 @@ Quick start to create a new Godot project.
    5. Tada! Our player can now move around with arrow keys and is affected by gravity! Although there’s nothing to stand on so they keep falling into the void. Now it’s time to add something for our player to stand on.
 
 ---
-   ### Player Overview
-   
+
+<details>
+  <summary> <b>Player Overview</b> </summary>
+
    <img src="./ReadMeAssets/player.png" alt="isolated" width="300"/>
 
    - **Node2D**⤵
@@ -208,10 +197,15 @@ Quick start to create a new Godot project.
          - Add a **CollisionShape2D** and adjust the collision boundary to match the Sprite2D
 
    <img src="./ReadMeAssets/player.gif" alt="isolated" width="800"/>
-
+  </details>
+  
 ---
 
 ## 3. Creating a platform
+
+   Add image
+  
+    <img src="./ReadMeAssets/scripts.png" alt="isolated" width="300" />
 
    1. To create our player we used a character body, to create level geometry we’ll want a **StaticBody2D**. Right click on the **Level node** and then add a new StaticBody2D. Name it ***"Platform”***
    
@@ -456,3 +450,4 @@ https://guttykreum.itch.io/orudo-taima
 ---
 
 ![alt text](./ReadMeAssets/header.png "Header")
+
