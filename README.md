@@ -203,9 +203,6 @@ Quick start to create a new Godot project.
 
 ## 3. Creating a platform
 
-   Add image
-  
-    <img src="./ReadMeAssets/scripts.png" alt="isolated" width="300" />
 
    1. To create our player we used a character body, to create level geometry we’ll want a **StaticBody2D**. Right click on the **Level node** and then add a new StaticBody2D. Name it ***"Platform”***
    
@@ -450,4 +447,5 @@ https://guttykreum.itch.io/orudo-taima
 ---
 
 ![alt text](./ReadMeAssets/header.png "Header")
+
 
